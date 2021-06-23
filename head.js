@@ -8,11 +8,11 @@ const assertEqual = function(actual, expected) {
 };
 
 const head = function(head) {
-	if (head === '') {
-  	return undefined
+  if (head === '') {
+    return undefined;
   } else {
-  	return head[0];
-	}
+    return head[0];
+  }
 };
 
 // TEST CODE
