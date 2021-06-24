@@ -1,11 +1,13 @@
 // FUNCTION IMPLEMENTATION
-const eqArrays = function(actual, expected) {
-  if (JSON.stringify(actual) === JSON.stringify(expected)) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+const eqArrays = function(arr1, arr2) {
+  if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
+    console.log(true);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+    console.log(false);
   }
 };
+
+
 
 
 eqArrays([1, 2, 3], [1, 2, 3]); // => true
