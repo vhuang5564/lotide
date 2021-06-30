@@ -1,15 +1,3 @@
-const eqArrays = function(arr1, arr2) {
-  if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
-    console.log(true);
-  } else {
-    console.log(false);
-  }
-};
-
-const assertArraysEqual = (arr1, arr2) => {
-  eqArrays(arr1, arr2);
-};
-
 const middle = array => {
   if (array.length <= 2) { // edge case: if number of elements is <= 2 returns empty array
 
@@ -28,6 +16,4 @@ const middle = array => {
   }
 };
 
-
-console.log(middle([1, 2, 3])); // => [2]
-middle([1, 2, 3, 4, 5, 6]); // => [3, 4]
+module.exports = middle;

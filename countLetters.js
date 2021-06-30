@@ -9,24 +9,20 @@ const eqArrays = function(arr1, arr2) {
 
 const countLetters = (letters) => {
 
-  for (let letter of letters) {
-    const letterObj = {};
+  letters = letters.split(' ').join(''); // gets rid of blank spaces
 
-    if (!('letter' in letterObj)) { // makes key value for each letter
-      letterObj[letter] = 0;
-    }
+  let letterObj = {};
 
-    if (eqArrays(letter, letter)) { // adds + 1 each time for each letter
-      letterObj[letter] = letterObj[letter] + 1;
-    }
-
-    console.log(letterObj);
-
-    // letterObj.reduce(function (a, b) {
-    //   return {letter: a.x + b.x};
-    // });
+  for (let letter of letters) { // creates key value for each unique letter
+    if (letter !== letterObj[letter]) {
+      letterObj[letter] = 0
+    };
   }
+
+  for (let letter of letters) { // increments key value if it is equal to letter
+    letterObj[letter] += 1;
+  }
+  return letterObj;
 };
 
-countLetters('LHL');
-
+console.log(countLetters('lighthouse labs'));

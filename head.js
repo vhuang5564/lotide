@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 const head = function(head) {
   if (head === '') {
     return undefined;
@@ -7,3 +5,6 @@ const head = function(head) {
     return head[0];
   }
 };
+
+
+module.exports = head;
